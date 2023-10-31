@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 mod = number % 10 if number > 10 else number % -10
-print(f"Last digit of {number} is {mod} ", end = "")
+print(f"Last digit of {number} is {mod} ", end="")
 if mod > 5:
     print("and is greater than 5")
 elif mod == 0:

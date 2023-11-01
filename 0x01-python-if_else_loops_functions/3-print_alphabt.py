@@ -5,4 +5,4 @@ for w in range(97, 122):
     elif w == 113:
         continue
     else:
-        print(f"{w:c}", end="")
+        print("{:c}".format(w), end="")

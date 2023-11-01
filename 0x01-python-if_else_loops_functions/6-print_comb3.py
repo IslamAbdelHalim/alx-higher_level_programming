@@ -7,4 +7,4 @@ for i in range(10):  # for first number
             if (i + j) != 17:
                 print("{}{}, ".format(i, j), end="")
             else:
-                print()
+                print(f"{i}{j}")

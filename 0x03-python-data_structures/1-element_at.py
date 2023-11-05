@@ -5,7 +5,9 @@ def element_at(my_list, idex):
     elif idex > len(my_list):
         return None
     else:
-        return my_list[idex]
+        for x in my_list:
+            if x == idex:
+                return my_list[x]
 
 
 # None: is a special value that represents the absence of a

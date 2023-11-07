@@ -1,2 +1,25 @@
 #!/usr/bin/bash
-python3 -m compileall -b $PYFILE
+
+# Check if the PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Check if the specified Python script file exists
+if [ ! -f "$PYFILE" ]; then
+    echo "Error: The specified Python file '$PYFILE' does not exist."
+    exit 1
+fi
+
+# Create the output filename by appending 'c' to the original filename
+output_filename="${PYFILE%.py}.pyc"
+
+# Compile the Python script
+if python -m py_compile "$PYFILE"; then
+    echo "Compiled '$PYFILE' to '$output_filename'"
+else
+    echo "Error: Compilation of '$PYFILE' failed."
+    exit 1
+fi
+

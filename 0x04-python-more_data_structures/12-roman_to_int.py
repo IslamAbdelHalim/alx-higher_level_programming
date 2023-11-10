@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if not roman_string or type(roman_string) != str:
+        return 0
     roman_dicit = {
             'I': 1,
             'V': 5,
@@ -9,8 +11,6 @@ def roman_to_int(roman_string):
             'D': 500,
             'M': 1000
             }
-    if not roman_string:
-        return None
 
     num = 0
     total = 0

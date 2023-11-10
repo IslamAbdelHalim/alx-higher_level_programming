@@ -14,7 +14,6 @@ def roman_to_int(roman_string):
 
     num = 0
     total = 0
-
     for x in reversed(roman_string):
         num = roman_dicit[x]
         total += num if total < num * 5 else -num

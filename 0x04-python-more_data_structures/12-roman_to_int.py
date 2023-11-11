@@ -11,7 +11,6 @@ def roman_to_int(roman_string):
             'D': 500,
             'M': 1000
             }
-
     num = 0
     total = 0
     for x in reversed(roman_string):

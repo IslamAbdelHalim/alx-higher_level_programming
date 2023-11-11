@@ -48,6 +48,5 @@ int main(void)
     current->next = temp;
 
     free_listint(head);
-
     return (0);
 }

@@ -1,0 +1,55 @@
+The 'text_indentaion' Module
+===============================
+
+The text_indentation() unction that prints a text with 2
+new lines after each of these characters: ., ? and :
+
+==========================================
+Import Module
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test Case 0:
+	>>> text_indentation(33)
+    	Traceback (most recent call last):
+    	...
+    	TypeError: text must be a string
+
+Test Case 1:
+    	>>> text_indentation("Holberton          ")
+    	Holberton
+
+Test Case 2:
+    	>>> text_indentation("        Holberton")
+    	Holberton
+    
+Test Case 3:
+    	>>> text_indentation("        Holberton          ")
+    	Holberton
+    
+Test Case 4:
+    	>>> text_indentation("")
+
+Test Case 5:
+    	>>> text_indentation("      ")
+
+Test Case 6:
+    	>>> text_indentation("Hello: Holberton")
+    	Hello:
+    	<BLANKLINE>
+    	Holberton
+
+Test Case 7:
+    	>>> text_indentation(None)
+    	Traceback (most recent call last):
+    	...
+    	TypeError: text must be a string
+
+Test Case 8:
+	>>> text_indentation("Hello   :     Holberton    ?    school.    fooo")
+    	Hello:
+    	<BLANKLINE>
+    	Holberton?
+   	<BLANKLINE>
+   	school.
+   	<BLANKLINE>
+    	fooo

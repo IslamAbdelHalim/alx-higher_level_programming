@@ -46,14 +46,14 @@ class Rectangle:
 
     def perimeter(self):
         """method calc perimeter"""
-        if self.__width == 0 and self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.height) * 2
 
     def __str__(self):
         """to return on string"""
         shape = ""
-        if self.__width != 0 or self.__height != 0:
+        if self.__width != 0 and self.__height != 0:
             shape = "\n".join('#' * self.__width
                               for i in range(self.__height))
         return shape

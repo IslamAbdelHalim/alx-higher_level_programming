@@ -20,6 +20,7 @@ class Square(Rectangle):
         self.integer_validator("size", size)
         self.__size = size
         Rectangle.__init__(self, self.__size, self.__size)
+
     def __str__(self):
         """
         return The string of class

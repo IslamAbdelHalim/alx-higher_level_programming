@@ -7,15 +7,13 @@ def pascal_triangle(n):
 
     if n <= 0:
         return []
-    pascal = []
+    pascal = [[1]]
 
-    for row in range(n):
-        current_row = []
-        for col in range(row + 1):
-            if col == 0 or col == row:
-                current_row.append(1)
-            else:
-                current_row.append
-                (pascal[row - 1][col - 1] + pascal[row - 1][col])
-        pascal.append(current_row)
-        return pascal
+    while len(pascal) != n:
+        pasc = pascal[-1]
+        temp = [1]
+        for i in range(len(pasc) - 1):
+            temp.append(pasc[i] + pasc[i + 1])
+        temp.append(1)
+        pascal.append(temp)
+    return pascal

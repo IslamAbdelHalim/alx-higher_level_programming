@@ -15,7 +15,7 @@ def check_size(size):
 def check_position(position):
     """function that check if the position is tuple and int"""
     if type(position) is not tuple or type(position[0]) is not int or\
-            type(position[1]) is not int:
+            type(position[1]) is not int or len(position) != 2:
         raise TypeError("position must be a tuple of 2 positive integers")
 
 
@@ -71,6 +71,8 @@ class Square:
         if self.__size == 0:
             print("")
         else:
+            for i in range(self.__position[1]):
+                print()
             for col in range(self.__size):
                 for space in range(self.__position[0]):
                     print(" ", end="")

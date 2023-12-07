@@ -77,5 +77,5 @@ class SinglyLinkedList:
         while current_element.next_node is not None:
             linked_list += str(current_element.data) + '\n'
             current_element = current_element.next_node
-        linked_list += str(current_element.data)
+        linked_list += str(current_element.data) + '\n'
         return linked_list

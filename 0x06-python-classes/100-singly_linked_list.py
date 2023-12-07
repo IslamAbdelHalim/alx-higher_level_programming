@@ -1,15 +1,24 @@
 #!/usr/bin/python3
-"""Linked list Moduel"""
+"""linked list Module"""
 
 
 class Node:
-    """class node define linked list"""
+    """
+    This a Node class that create
+    a node of linked list
+    """
     def __init__(self, data, next_node=None):
-        """Initialize The variables"""
+        """
+        initialize the variable of node
+
+        Args:
+            self: The instance of node
+            data: the data of node
+            next_node = The pointer to next node
+        """
         if type(data) is not int:
             raise TypeError("data must be an integer")
         self.data = data
-
         if not isinstance(next_node, Node) and next_node is not None:
             raise TypeError("next_node must be a Node object")
         self.next_node = next_node
@@ -21,7 +30,7 @@ class Node:
 
     @data.setter
     def data(self, value):
-        """set data"""
+        """setter data"""
         if type(value) is not int:
             raise TypeError("data must be an integer")
         self.__data = value
@@ -33,37 +42,40 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        """set next_node"""
+        """setter next_node"""
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
 class SinglyLinkedList:
+    """This is linked list class"""
     def __init__(self):
-        """initialize the head of linked list"""
+        """Initialize just head"""
         self.head = None
 
     def sorted_insert(self, value):
-        """Insert and insert a new node"""
+        """function that add and sort node"""
         new_node = Node(value)
         if self.head is None or self.head.data >= value:
             new_node.next_node = self.head
             self.head = new_node
             return
-
         temp = self.head
         while temp.next_node is not None and temp.next_node.data < value:
             temp = temp.next_node
-
         new_node.next_node = temp.next_node
         temp.next_node = new_node
 
     def __str__(self):
-        """print linked list"""
+        """
+        function that return the element
+        of linked list in string
+        """
         linked_list = ""
-        temp = self.head
-        while temp:
-            linked_list += str(temp.data) + "\n"
-            temp = temp.next_node
+        current_element = self.head
+        while current_element.next_node is not None:
+            linked_list += str(current_element.data) + '\n'
+            current_element = current_element.next_node
+        linked_list += str(current_element.data)
         return linked_list

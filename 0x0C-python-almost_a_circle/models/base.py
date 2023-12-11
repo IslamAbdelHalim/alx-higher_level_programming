@@ -53,3 +53,17 @@ class Base:
                     dicts.append(obj.to_dictionary())
                 # add the list dict to json file
                 file.write(cls.to_json_string(dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+         function that returns the list of the JSON string
+         representation json_string
+
+         Args:
+            json_string; is a string representing a list of dictionaries
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)

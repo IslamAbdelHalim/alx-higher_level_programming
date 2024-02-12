@@ -5,13 +5,12 @@ const args = process.argv;
 if (args.length === 2 || args.length === 3) {
   console.log(0);
 } else {
-
   // sort the array
-  const SortArgs = args.sort();
+  const SortArgs = args.sort().slice(3);
 
   // know the length
   const len = SortArgs.length;
 
   // search the second biggest integer
-  console.log(Number(SortArgs[len - 2]));
+  console.log(SortArgs[len - 2]);
 }

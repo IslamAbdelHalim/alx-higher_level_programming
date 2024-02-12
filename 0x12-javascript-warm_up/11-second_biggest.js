@@ -6,7 +6,7 @@ if (args.length === 2 || args.length === 3) {
   console.log(0);
 } else {
   // sort the array
-  const SortArgs = args.sort().slice(3);
+  const SortArgs = args.sort();
 
   // know the length
   const len = SortArgs.length;

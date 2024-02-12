@@ -2,7 +2,7 @@
 
 const args = process.argv;
 
-if (args.length === 2 || args.length === 3) {
+if (args.length < 4) {
   console.log(0);
 } else {
   // sort the array

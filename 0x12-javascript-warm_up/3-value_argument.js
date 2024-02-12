@@ -6,7 +6,5 @@ const len = args.length;
 if (len === 2) {
   console.log('No argument');
 } else {
-  for (let i = 2; i < len; i++) {
-    console.log(args[i]);
-  }
+  console.log(args[2]);
 }

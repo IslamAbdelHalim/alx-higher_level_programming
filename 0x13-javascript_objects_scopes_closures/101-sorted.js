@@ -9,7 +9,7 @@ const arr = Object.keys(dict);
 const arr2 = Object.values(dict);
 
 /*
-  check if the kay is present in new object 
+  check if the kay is present in new object
   if present add its value to the array
   if not create a new key and create the array in this key
 */

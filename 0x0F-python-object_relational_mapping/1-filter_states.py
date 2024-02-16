@@ -11,13 +11,9 @@ if __name__ == "__main__":
             passwd=sys.argv[2],
             database=sys.argv[3],
             port=3306)
-
     cursor = db.cursor()
-
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
-
     for value in cursor.fetchall():
         print(value)
-
     cursor.close()
     db.close()

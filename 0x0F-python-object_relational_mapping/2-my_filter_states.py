@@ -22,3 +22,6 @@ if __name__ == "__main__":
 
     for value in cursor.fetchall():
         print(value)
+
+    cursor.close()
+    db.close()

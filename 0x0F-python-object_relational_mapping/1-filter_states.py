@@ -16,4 +16,6 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
 
     for value in cursor.fetchall():
-            print(value)
+        print(value)
+    cursor.close()
+    db.close()

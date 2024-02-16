@@ -12,5 +12,5 @@ if __name__ == "__main__":
             port=3306) as db:
         with db.cursor() as cursor:
             cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
-            for value in cursor:
+            for value in cursor.fetchall():
                 print(value)

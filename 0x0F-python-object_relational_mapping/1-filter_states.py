@@ -5,6 +5,7 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
+    """Your code should not be executed when imported"""
     db = MySQLdb.connect(
             host="localhost",
             user=sys.argv[1],

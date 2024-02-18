@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     session = Session()
 
-    newState = State(name="Louisiane")
+    newState = State(name="Louisiana")
 
     session.add(newState)
 

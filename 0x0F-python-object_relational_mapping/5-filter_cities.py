@@ -24,9 +24,10 @@ if __name__ == "__main__":
             """, (sys.argv[4],))
 
     cities = cursor.fetchall()
-    for city in cities:
-        print(city[0] + ', ', end="")
-    print()
+
+    cityName = [city[0] for city in cities]
+
+    print(', '.join(cityName))
 
     cursor.close()
     db.close()

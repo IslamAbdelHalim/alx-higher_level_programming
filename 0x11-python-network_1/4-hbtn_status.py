@@ -8,5 +8,6 @@ if __name__ == "__main__":
     response = requests.get(url)
     content = response.text
     print("Body response:")
-    print("\t- type: {}".format(type(response.text)))
-    print("\t- content: {}".format(content))
+    print("\t- type: {}".format(type(content)))
+    print("\t- content:", response.text)
+

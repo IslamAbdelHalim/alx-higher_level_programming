@@ -11,5 +11,5 @@ if __name__ == "__main__":
     content = response.text
     # Format and print the response body
     print("Body response:$")
-    print("    - content: {}".format(type(content)))
-    print("    - type: {}".format(content))
+    print("    - type: {}".format(type(content)))
+    print("    - content: {}".format(content))

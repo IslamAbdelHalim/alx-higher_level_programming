@@ -9,11 +9,11 @@ if __name__ == "__main__":
 
     user_name = sys.argv[1]
     password = sys.argv[2]
-    
-    api = 'https://api.github.com/users'
+
+    api = 'https://api.github.com/user'
 
     resp = requests.get(api, auth=(user_name, password))
 
     data = resp.json()
 
-    print(data[0].get('id'))
+    print(data.get('id'))

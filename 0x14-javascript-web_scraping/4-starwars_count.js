@@ -3,7 +3,7 @@
 const request = require('request');
 const url = process.argv[2];
 
-request.get(url, (err, res, body) => {
+request(url, (err, res, body) => {
   const movies = JSON.parse(body).results;
   let num = 0;
   movies.forEach(element => {

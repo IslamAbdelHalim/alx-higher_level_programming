@@ -1,7 +1,10 @@
 -- This query returns the titles of all TV shows that are in the 'Comedy' genre, sorted in alphabetical order.
 
-SELECT tv_shows.title
-FROM tv_shows
-JOIN tv_genres ON tv_shows.genre_id = tv_genres.id
-WHERE tv_genres.name = 'Comedy'
-ORDER BY tv_shows.title ASC;
+SELECT t.`title`
+FROM `tv_shows` AS t
+INNER JOIN `tv_show_genres` AS s
+ON t.`id` = s.`show_id`
+INNER JOIN `tv_genres` AS g
+ON g.`id` = s.`genre_id`
+WHERE g.`name` = "Comedy"
+ORDER BY t.`title`;
